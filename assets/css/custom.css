@@ -1,0 +1,202 @@
+/* Color */
+html, body {
+    max-height: 100% !important;
+    height: 100% !important;
+}
+.wrap {
+  /*  height: auto;
+    height: 70%;
+    max-height: 70%;*/
+    min-height: 80%; height: auto !important; height: 80%; 
+}
+.tinyone-yellow {
+    background-color: #fcdb00;
+}
+.tinyone-yellow-color {
+    color: #fcdb00;
+}
+.tinone-slareGrey {
+    color: SlateGrey;
+}
+.black-bg {
+  background-color: #000000;
+}
+.foreground-white {
+  color: white;
+}
+
+.navbar-nav li.menu-item {
+    padding: 0 3rem;
+}
+.navbar-nav li.menu-item a{
+    color: black;
+}
+.navbar-nav li.menu-item a:visited{
+    color: green;
+}
+.carousel-indicators li {
+    height: 10px;
+    width: 10px;
+    border-radius: 15px;
+}
+.tinyone-slider {
+height: 1400px;
+}
+/* Start of slider icon sprites*/
+#apple {
+left:0;
+width: 48px;
+height: 48px;
+background: url('../img/sprite_brand.gif') 3px -2px;
+}
+#apple:hover {
+left:0;
+width: 48px;
+height: 48px;
+background: url('../img/sprite_brand.gif') 3px -48px;
+}
+#android {
+left:48px;
+width: 48px;
+height: 48px;
+background: url('../img/sprite_brand.gif') -38px -2px;
+}
+#android:hover {
+left:48px;
+width: 48px;
+height: 48px;
+background: url('../img/sprite_brand.gif') -38px -48px;
+}
+#windows {
+left:108px;
+width: 48px;
+height: 48px;
+background: url('../img/sprite_brand.gif') -88px -2px;
+}
+#windows:hover {
+left:108px;
+width: 48px;
+height: 48px;
+background: url('../img/sprite_brand.gif') -88px -48px;
+}
+/* End of slider icon sprites*/
+/* Start of CTA icon sprites*/
+#fb {
+left:0;
+width:48px;
+height:48px;
+background: url('../img/socialmedia.gif') 0px -2px;
+}
+
+#fb:hover {
+left:0;
+width:48px;
+height:48px;
+background: url('../img/socialmedia.gif') 0px -43px;
+}
+#twitter {
+left:68px;
+width:48px;
+height:48px;
+background: url('../img/socialmedia.gif') -48px -2px;
+}
+#twitter:hover {
+left:68px;
+width:48px;
+height:48px;
+background: url('../img/socialmedia.gif') -48px -43px;
+}
+#gplus {
+left:136px;
+width:48px;
+height:48px;
+background: url('../img/socialmedia.gif') -96px -2px;
+}
+#gplus:hover {
+left:136px;
+width:48px;
+height:48px;
+background: url('../img/socialmedia.gif') -96px -43px;
+}
+#pinterest {
+left:204px;
+width:48px;
+height:48px;
+background: url('../img/socialmedia.gif') -144px -2px;
+}
+#pinterest:hover {
+left:204px;
+width:48px;
+height:48px;
+background: url('../img/socialmedia.gif') -144px -43px;
+}
+#navlist, #social-navlist {
+position: relative;
+}
+#navlist li, #social-navlist li {
+list-style-type: none;
+position: absolute;
+top: 0;
+}
+#navlist li, #navlist a, #social-navlist li, #social-navlist a {
+  height: 44px;
+  display: inline;
+}
+.btn-tinyone-yellow {
+    color: black;
+    background-color: #fcdb00;
+    border-color: #fcdb00;
+}
+.btn-tinyone-yellow:hover {
+    color: black;
+    background-color: #bda712;
+    border-color: #bda712;
+}
+
+/* Footer widgets */
+.footer-sidebar ul {
+    list-style-type: none;
+}
+/* Overide footer width to make column count to five. */
+.footer-sidebar {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+.footer-widget a {
+    color: #ffffff;
+}
+.footer-widget a:hover {
+    color: #fcdb00;
+    text-decoration: none;
+}
+
+/***************************
+ * Aside sidebar
+ ***************************/
+#sidebar {
+    list-style-type: none;
+}
+#sidebar li ul {
+    list-style-type: none;
+    padding-left: .4rem;
+}
+#sidebar li ul li {
+    border-bottom: solid #e9edf1 .5px;
+    margin: 1rem;
+    padding: .5rem;
+}
+/****************************
+ * Nav
+ **************************/
+.navbar-nav li a:hover {
+    text-decoration: none;
+    border-bottom: solid 3px white;
+    padding-bottom: .8rem;
+}
+.navbar-nav li.menu-item a:visited {
+    color: black;
+}
+.navbar-nav  {
+    color:white;
+  
+}
