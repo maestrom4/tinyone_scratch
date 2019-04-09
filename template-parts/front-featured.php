@@ -7,77 +7,33 @@
         <!-- Features -->
         <div class="col-12 col-md-12 mb-5 mt-3">
             <div class="row mb-5">
-                <div class="col-12 col-md-4">
-                    <div class="row">
-                        <div class="col-12 col-md-3">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/img/features_icon_responsive.png';?>" alt="">
-                        </div>
-                        <div class="col-12 col-md-9">
-                            <h4>Fully responsive</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste repellat, labore deserunt debitis voluptatum nesciunt assumenda iusto sunt facilis. Laboriosam nesciunt veniam accusamus eos quas voluptate sunt doloremque at aliquid.</p>
-                        </div>
-                    </div>
-                </div>
-                 <div class="col-12 col-md-4">
-                    <div class="row">
-                        <div class="col-12 col-md-3">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/img/features_icon_layered_psd.png';?>" alt="">
-                        </div>
-                        <div class="col-12 col-md-9">
-                            <h4>Fully responsive</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste repellat, labore deserunt debitis voluptatum nesciunt assumenda iusto sunt facilis. Laboriosam nesciunt veniam accusamus eos quas voluptate sunt doloremque at aliquid.</p>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="row">
-                        <div class="col-12 col-md-3">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/img/features_icon_font_awsome_icons.png';?>" alt="">
-                        </div>
-                        <div class="col-12 col-md-9">
-                            <h4>Fully responsive</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste repellat, labore deserunt debitis voluptatum nesciunt assumenda iusto sunt facilis. Laboriosam nesciunt veniam accusamus eos quas voluptate sunt doloremque at aliquid.</p>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="row">
-                        <div class="col-12 col-md-3">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/img/features_icon_html_css.png';?>" alt="">
-                        </div>
-                        <div class="col-12 col-md-9">
-                            <h4>Fully responsive</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste repellat, labore deserunt debitis voluptatum nesciunt assumenda iusto sunt facilis. Laboriosam nesciunt veniam accusamus eos quas voluptate sunt doloremque at aliquid.</p>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="row">
-                        <div class="col-12 col-md-3">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/img/features_icon_email_template.png';?>" alt="">
-                        </div>
-                        <div class="col-12 col-md-9">
-                            <h4>Fully responsive</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste repellat, labore deserunt debitis voluptatum nesciunt assumenda iusto sunt facilis. Laboriosam nesciunt veniam accusamus eos quas voluptate sunt doloremque at aliquid.</p>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="row">
-                        <div class="col-12 col-md-3">
-                        <img src="<?php echo get_template_directory_uri() . '/assets/img/features_icon_free_download.png';?>" alt="">
-                        </div>
-                        <div class="col-12 col-md-9">
-                            <h4>Fully responsive</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste repellat, labore deserunt debitis voluptatum nesciunt assumenda iusto sunt facilis. Laboriosam nesciunt veniam accusamus eos quas voluptate sunt doloremque at aliquid.</p>
-                        </div>
-                    </div>
-                    
-                </div>
+                <?php 
+                    $args = array(
+                        'posts_per_page' => 8,
+                        'post_type'      => 'to_featured',
+                        'post_status'    => 'publish',
+                    );
+                    $loop = new WP_Query( $args );
+                        while ( $loop->have_posts() ) :
+                            $loop->the_post();
+
+                            ?>
+                                <div class="col-12 col-md-4">
+                                    <div class="row">
+                                        <div class="col-12 col-md-3">
+                                        <?php the_post_thumbnail( 'thumbnail' ); ?>
+                                        </div>
+                                        <div class="col-12 col-md-9">
+                                            <h4><?php echo the_title(); ?></h4>
+                                            <p><?php echo the_excerpt() ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php
+                        endwhile;
+                    wp_reset_postdata();
+
+                ?>
             </div>
             <!-- end of row -->
             

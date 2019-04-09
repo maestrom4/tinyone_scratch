@@ -2,9 +2,9 @@
 /**
  * The main template file
  *
- * @package tinyone
- * @subpackage tinone
- * @since v1.0
+ * @package WordPress
+ * @subpackage tinyone
+ * @since 1.0.0
  */
 ?>
 <?php get_header(); ?>

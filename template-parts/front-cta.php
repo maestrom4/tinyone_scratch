@@ -15,13 +15,9 @@
                             </div>  
                             
                         </div>
-                        
-                    <!--     <input type="text">
-                        <button>Submit</button> -->
                     </form> 
                 </div>
                 <div class="col-12 col-md-4 mx-auto my-5">
-                    <!-- <img src="<?php //echo get_template_directory_uri() . '/assets/img/socialmedia.gif'?>" alt=""> -->
                     <ul id="social-navlist">
                         <li id="fb"></li>
                         <li id="twitter"></li>

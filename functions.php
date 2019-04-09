@@ -1,5 +1,13 @@
 <?php
-
+/**
+ * The template for displaying archive pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package WordPress
+ * @subpackage tinyone
+ * @since 1.0.0
+ */
 
 if ( ! function_exists('tinyone_theme_setup') ):
     function tinyone_theme_setup () {
@@ -435,5 +443,25 @@ class WP_Widget_Recent_Posts_tinyone extends WP_Widget {
         <label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Display post date?' ); ?></label></p>
         <?php
     }
+} // end of class widget
+
+// Our custom post type function
+function tinyone_featured() {
+ 
+    register_post_type( 'to_featured',
+    // CPT Options
+        array(
+            'labels' => array(
+                'name' => __( 'Tinyone Featured' ),
+                'singular_name' => __( 'Featured' )
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'tineyone-featured'),
+            'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' )
+        )
+    );
 }
+// Hooking up our function to theme setup
+add_action( 'init', 'tinyone_featured' );
 

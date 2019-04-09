@@ -1,4 +1,14 @@
-
+<?php
+/**
+ * The template for displaying archive pages
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package WordPress
+ * @subpackage tinyone
+ * @since 1.0.0
+ */
+?>
 
 <div id="footer-sidebar" class="secondary black-bg foreground-white">
     <div class="container py-5">
